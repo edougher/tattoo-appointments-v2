@@ -63,7 +63,6 @@ const ApptCard = (props) => {
       .then(respData => {
         console.log(respData)
         props.imageAttachmentSuccess(respData)
-        debugger
      })
    }
 

@@ -11,7 +11,6 @@ const currentUserReducer = (state=user, action) => {
             user.currentUser.id = action.data.user.id
             user.currentUser.username = action.data.user.username
             action.data.appts ? user.appointments = action.data.appts : user.appointments = {...state.appointments}
-            //debugger
             action.data.imgs === undefined || action.data.imgs.length === 0 ? user.imgs = [] : user.imgs = action.data.imgs[0]
             return user
         case 'NEW_APPT_CREATED':
