@@ -18,6 +18,7 @@ class Home extends Component {
     //this.authListener()
      return images.map(image => (
          <ImageCard img={image} />
+         //console.log(image)
      ))
    } 
 

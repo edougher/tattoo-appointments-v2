@@ -6,7 +6,7 @@ import Request from './Request'
 import RequestForm from './RequestForm'
 import Appointments from './Appointments';
 import CalendarComponent from './Calendar'
-import Background from '../images/rose.png'
+//import Background from '../images/rose.png'
 import { addUserSuccess } from '../actions/index'
 import { getCalendarInfo } from '../actions'
 import { connect } from 'react-redux';
