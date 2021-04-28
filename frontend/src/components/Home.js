@@ -5,7 +5,7 @@ import ImageCard from './ImageCard'
 import Card from 'react-bootstrap/Card'
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
-import images from '../images/imagesFromInsta.js'
+//import images from '../images/casey_insta_images/'
 
  
 
@@ -15,12 +15,17 @@ class Home extends Component {
 
 // ####  TODO instagram api
   getImages = () => {
-    //this.authListener()
-     return images.map(image => (
-         <ImageCard img={image} />
-         //console.log(image)
-     ))
-   } 
+    let images = []
+    for(let x = 1; x <= 12; x++){
+      //Importing/Using Images in React
+      //https://www.youtube.com/watch?v=taMJct5oeoI
+      let imagePath = `/images/casey_insta_images/${x}.jpeg`
+      images.push(imagePath)
+}
+    return images.map(image => (
+      <ImageCard img={image} />
+    )) 
+} 
 
   style = {
     borderStyle: 'solid',
