@@ -8,9 +8,6 @@ import Button from 'react-bootstrap/Button'
 //import images from '../images/casey_insta_images/'
 
  
-
-
-
 class Home extends Component {
 
 // ####  TODO instagram api
