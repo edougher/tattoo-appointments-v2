@@ -92,6 +92,7 @@ class SignUp extends React.Component {
      fetch('http://localhost:3000/user', reqObj)
       .then(resp => resp.json())
       .then(respData  => {
+        debugger
        this.props.addUserSuccess(respData)
        this.props.history.push('/home')
       })
