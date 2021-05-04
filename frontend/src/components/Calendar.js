@@ -80,7 +80,7 @@ class CalendarComponent extends React.Component {
            />
            {
            this.calendarState.date === "" ?
-           console.log('this.state.date === empty')
+           console.log('this.calendarState.date === empty')
            :
             this.showTimeSlots()
             }

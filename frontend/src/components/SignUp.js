@@ -34,10 +34,11 @@ class SignUp extends React.Component {
 
    firebaseSignUp = (email, password) => {
     fire.auth().createUserWithEmailAndPassword(email, password)
-    .then((userCredential) => {
+    .then((userCredentials) => {
       // Signed in 
-      var user = userCredential.user;
+      var user = userCredentials.user;
       console.log(user);
+      
       // ...
     })
     .catch((error) => {
@@ -86,7 +87,7 @@ class SignUp extends React.Component {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(this.state)
+        body: JSON.stringify(this.userState)
       }
       
      fetch('http://localhost:3000/user', reqObj)
@@ -115,7 +116,7 @@ class SignUp extends React.Component {
           <Card.Body>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" name="email" placeholder="Enter email" value={this.state.email}onChange={this.handleChange}/>
+            <Form.Control type="email" name="email" placeholder="Enter email" value={this.state.email} onChange={this.handleChange}/>
             <Form.Text className="text-muted">
               We'll never share your email with anyone else.......ok, maybe we will
             </Form.Text>

@@ -5,8 +5,11 @@ const user = {
 }
 
 const currentUserReducer = (state=user, action) => {
-    let user = state;
+    //let user = state;
     switch(action.type){
+        case 'USER_CREATED_SUCCESS':
+            debugger
+            return state
         case 'SIGN_UP':
             //user.currentUser.id = action.data.user.id
             //user.currentUser.username = action.data.user.username

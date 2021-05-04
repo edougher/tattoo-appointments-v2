@@ -28,6 +28,7 @@ const App = (props) => {
         getOpenDates()
       } else {
         console.log('No User Signed In');
+        debugger
         this.props.history.push('/signin')
       }
       

@@ -9,6 +9,8 @@ const apptReducer = (state=[], action) => {
             //return user
             debugger
             return state
+            case 'CURRENT_APPTS':
+            return state
         //case 'EDIT_APPT_SUCCESS':
         //    const objIndex = user.appointments.findIndex(obj => obj.id === action.data.id)
         //    user.appointments[objIndex] = action.data
