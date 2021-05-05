@@ -6,8 +6,9 @@ import Request from './Request'
 import RequestForm from './RequestForm'
 import Appointments from './Appointments';
 import CalendarComponent from './Calendar'
-//import Background from '../images/rose.png'
+
 import { addUserSuccess } from '../actions/index'
+import { getMyAppts } from '../actions/index'
 import { getCalendarInfo } from '../actions'
 import { connect } from 'react-redux';
 import fire from '../firebase.js'
@@ -28,7 +29,6 @@ const App = (props) => {
         getOpenDates()
       } else {
         console.log('No User Signed In');
-        debugger
         this.props.history.push('/signin')
       }
       
@@ -39,7 +39,9 @@ const App = (props) => {
        .then(resp => resp.json())
        .then(respData => {
          console.log(respData)
+         props && props.getMyAppts(respData)
          props && props.addUserSuccess(respData)
+
       })
     }
   }
@@ -79,6 +81,7 @@ const App = (props) => {
 
 const mapDispatchToProps = {
   addUserSuccess,
+  getMyAppts,
   getCalendarInfo
 }
 

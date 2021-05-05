@@ -14,7 +14,7 @@ export const createNewAppointment = (data) => {
 
 export const getMyAppts = (data) => {
     return {
-        type: 'MY_APPTS',
+        type: 'CURRENT_APPTS',
         data: data
     }
 }

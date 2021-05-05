@@ -8,7 +8,8 @@ const currentUserReducer = (state=user, action) => {
     //let user = state;
     switch(action.type){
         case 'USER_CREATED_SUCCESS':
-            debugger
+            return state
+        case 'SIGN_IN_SUCCESS':
             return state
         case 'SIGN_UP':
             //user.currentUser.id = action.data.user.id
@@ -16,7 +17,6 @@ const currentUserReducer = (state=user, action) => {
             //action.data.appts ? user.appointments = action.data.appts : user.appointments = {...state.appointments}
             //action.data.imgs === undefined || action.data.imgs.length === 0 ? user.imgs = [] : user.imgs = action.data.imgs[0]
             //return user
-            debugger
             return {
                 ...state,
                 currentUser: action.data.user
