@@ -19,6 +19,13 @@ export const getMyAppts = (data) => {
     }
 }
 
+export const getMyApptsImgs = data => {
+    return {
+        type: 'CURRENT_APPTS_IMGS',
+        data: data
+    }
+}
+
 export const newApptAdded = (data) => {
     return {
         type: 'EDIT_APPT_SUCCESS',

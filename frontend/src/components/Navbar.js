@@ -41,7 +41,7 @@ class MyNavbar extends Component {
     
     const mapStateToProps = state => {
       return {
-        currentUser: state.currentUser.currentUser.username
+        currentUser: state.currentUser.username
       }
     }
 

@@ -89,7 +89,7 @@ const mapStateToProps = (state) => {
     return {
       // currentUser_Id: state.currentUser.currentUser.id,
       // userName: state.currentUser.currentUser.username,
-      appts: state.currentUser.appointments,
+      appts: state.appts.appointments,
       imgs: state.currentUser.imgs
     }
     

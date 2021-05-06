@@ -1,17 +1,31 @@
 
+const appts = {
+    appointments: [],
+    imgs: []
+}
 
 
-
-const apptReducer = (state=[], action) => {
+const apptReducer = (state=appts, action) => {
     switch(action.type){
         case 'NEW_APPT_CREATED':
             //user.appointments.push(action.data)
             //return user
-            debugger
-            return state
+            return {
+                ...state,
+                appointments: state.appointments.concat(action.data)
+            }
             case 'CURRENT_APPTS':
                 debugger
-            return state
+            return {
+                ...state,
+                appointments: action.data
+            }
+            case 'CURRENT_APPTS_IMGS':
+                debugger
+                return {
+                    ...state,
+                    imgs: action.data
+                }
         //case 'EDIT_APPT_SUCCESS':
         //    const objIndex = user.appointments.findIndex(obj => obj.id === action.data.id)
         //    user.appointments[objIndex] = action.data

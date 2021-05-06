@@ -92,7 +92,7 @@ class Home extends Component {
 
 const mapStateToProps = state => {
   return {
-    currentUser: state.currentUser.currentUser.username,
+    currentUser: state.currentUser.username,
     appts: state.currentUser.appointments
   }
 }

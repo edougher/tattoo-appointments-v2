@@ -1,10 +1,6 @@
-const user = {
-    currentUser: {},
-    appointments: [],
-    imgs: []
-}
 
-const currentUserReducer = (state=user, action) => {
+
+const currentUserReducer = (state=[], action) => {
     //let user = state;
     switch(action.type){
         case 'USER_CREATED_SUCCESS':
@@ -34,13 +30,13 @@ const currentUserReducer = (state=user, action) => {
         //    user.appointments = user.appointments.filter(appt => appt.id !== id)
         //    user.imgs = user.imgs.filter(img => img.appointment_id !== id)
         //    return user
-        case 'IMAGE_UPLOADED_SUCCESS':
-            if (Object.keys(user.imgs).length === 0) {
-                user.imgs = [action.imageData]
-            } else {
-                user.imgs.push(action.imageData)
-            }
-            return user
+        //case 'IMAGE_UPLOADED_SUCCESS':
+        //    if (Object.keys(user.imgs).length === 0) {
+        //        user.imgs = [action.imageData]
+        //    } else {
+        //        user.imgs.push(action.imageData)
+        //    }
+        //    return user
         default:
             return state
     }

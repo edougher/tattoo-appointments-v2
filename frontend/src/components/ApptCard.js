@@ -16,6 +16,7 @@ const ApptCard = (props) => {
    image_url: ''
  }
  
+
  let apptImgs = props.imgs.filter(x => x.appointment_id === props.appt.id)
 
 

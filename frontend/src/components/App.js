@@ -9,6 +9,7 @@ import CalendarComponent from './Calendar'
 
 import { addUserSuccess } from '../actions/index'
 import { getMyAppts } from '../actions/index'
+import { getMyApptsImgs } from '../actions/index'
 import { getCalendarInfo } from '../actions'
 import { connect } from 'react-redux';
 import fire from '../firebase.js'
@@ -39,7 +40,8 @@ const App = (props) => {
        .then(resp => resp.json())
        .then(respData => {
          console.log(respData)
-         props && props.getMyAppts(respData)
+         props && props.getMyAppts(respData.appts)
+         props && props.getMyApptsImgs(respData.imgs)
          props && props.addUserSuccess(respData)
 
       })
@@ -82,6 +84,7 @@ const App = (props) => {
 const mapDispatchToProps = {
   addUserSuccess,
   getMyAppts,
+  getMyApptsImgs,
   getCalendarInfo
 }
 
