@@ -12,6 +12,7 @@ import { getMyAppts } from '../actions/index'
 import { getMyApptsImgs } from '../actions/index'
 import { getCalendarInfo } from '../actions'
 import { connect } from 'react-redux';
+//import * as authState from '../utils'
 import fire from '../firebase.js'
 
 import 'firebase/auth'
@@ -25,7 +26,8 @@ const App = (props) => {
   const authListener = () => {
     fire.auth().onAuthStateChanged(user => {
       if(user){
-        console.log(user);
+        console.log(user.email);
+        
         fetchSignedInUserInfo(user.email)
         getOpenDates()
       } else {

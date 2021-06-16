@@ -21,7 +21,6 @@ const apptReducer = (state=appts, action) => {
                 appointments: action.data
             }
             case 'CURRENT_APPTS_IMGS':
-                debugger
                 return {
                     ...state,
                     imgs: action.data
